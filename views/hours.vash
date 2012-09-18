@@ -1,0 +1,17 @@
+<ol class="reasons">
+	@model.forEach(function(reason){
+		<li>@reason</li>
+	})
+</ol>
+
+@html.prepend('footer', function(model){
+	<text>This is a footer. </text>
+})
+
+@html.block('footer', function(){
+	<text>It's followed by primary content replaced from deep within. </text>
+})
+
+@html.append('footer', function(model){
+	<text>Aren't blocks fun? It's the last. </text>
+})
