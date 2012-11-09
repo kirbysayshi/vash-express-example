@@ -1,10 +1,14 @@
-@html.extends('layout', function(model){
+@html.extend('layout', function(model){
 
 	@html.block('content', function(model){
 		<h1 class="name">Welcome to @model.title</h1>
 		<p>Thanks for looking at Vash!</p>
 
 		@html.include('hours', model.reasons)
+
+		<p>This is after hours</p>
+		@html.include('hours', model.reasons)
+		<p>this is after another</p>
 	})
 
 })
