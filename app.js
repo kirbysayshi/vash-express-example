@@ -12,7 +12,7 @@ var app = express();
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
-  app.set('views', __dirname + '/views');
+  app.set('views', path.join( __dirname, '/views') ); // critical to use path.join on windows
   app.set('view engine', 'vash');
   app.use(express.favicon());
   app.use(express.logger('dev'));
