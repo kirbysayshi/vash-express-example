@@ -6,7 +6,14 @@
     "start": "node app"
   },
   "dependencies": {
-    "express": "3.0.1",
-	"vash": "0.5"
+    "express": "~4.10.2",
+    "vash": "~0.7.7",
+    "method-override": "~2.3.0",
+    "express-session": "~1.9.1",
+    "serve-favicon": "~2.1.6",
+    "morgan": "~1.5.0",
+    "body-parser": "~1.9.2",
+    "multer": "~0.1.6",
+    "errorhandler": "~1.2.2"
   }
 }

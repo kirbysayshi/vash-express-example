@@ -1,14 +1,23 @@
 @html.extend('layout', function(model){
 
-	@html.block('content', function(model){
-		<h1 class="name">Welcome to @model.title</h1>
-		<p>Thanks for looking at Vash!</p>
+    @html.block('content', function(model){
+            
+        <h2>@model.channel</h2>
 
-		@html.include('hours', model.reasons)
+        <table class="table table-bordered">
+            @model.buffer.forEach(function(msg){
+                <tr>
+                    <td>
+                        @msg.nick
+                    </td>
+                    <td>
+                        <small class="timestamp">@msg.date</small>
+                        @msg.args[1]                        
+                    </td>
+                </tr>
+            })
+        </table>
 
-		<p>This is after hours</p>
-		@html.include('hours', model.reasons)
-		<p>this is after another</p>
-	})
+    })
 
 })
